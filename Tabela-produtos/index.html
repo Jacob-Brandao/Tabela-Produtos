@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Aparecida Nutrição</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+
+	</head>
+	<body>
+
+		<header>
+			<div class=container>
+				<h1 class="titulo">Aparecida Nutrição</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2 class="titulotabela">Meus pacientes</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela"
+				placeholder="Digite o nome do produto">
+				<table>
+					<thead>
+						<tr>
+							<th>Produto</th>
+							<th>Preço Compra</th>
+							<th>Quantidade</th>
+							<th>Markup</th>
+							<th>Valor Revenda</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-produtos">
+						<tr class="produto" id="primeiro-produto">
+							<td class="info-nome">Paulo</td>
+							<td class="info-preco">100</td>
+							<td class="info-quantidade">2</td>
+							<td class="info-markup">1.6</td>
+							<td class="info-revenda">0</td>
+						</tr>
+
+						<tr class="produto">
+							<td class="info-nome">João</td>
+							<td class="info-preco">80</td>
+							<td class="info-quantidade">3</td>
+							<td class="info-markup">1.6</td>
+							<td class="info-revenda">0</td>
+						</tr>
+					</tbody>
+				</table>
+         <button id="buscar-produtos" class="botao bto-principal">Buscar Produtos</button>
+			</section>
+		</main>
+		<!-- ... -->
+<section class="container">
+    <h2 id="titulo-form">Adicionar novo produto</h2>
+    <form id="form-adiciona">
+        <div class="grupo">
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome" type="text" placeholder="digite o nome do seu produto" class="campo">
+        </div>
+        <div class="grupo">
+            <label for="preco">Preço:</label>
+            <input id="preco" name="preco" type="text" placeholder="digite o preço do seu produto" class="campo campo-medio">
+        </div>
+        <div class="grupo">
+            <label for="quantidade">Quantidade:</label>
+            <input id="quantidade" name="quantidade" type="text" placeholder="digite a quantidade do seu produto" class="campo campo-medio">
+        </div>
+        <div class="grupo">
+            <label for="markup">% de Markup:</label>
+            <input id="markup" type="text" placeholder="digite o markup do seu produto" class="campo campo-medio">
+        </div>
+
+        <button id="adicionar-produto" class="botao bto-principal">Adicionar</button>
+    </form>
+</section>
+
+		<script src="js/CalculaMarkup.js"></script>
+		<script src="js/form.js"></script>
+    <script src="js/remover-produto.js"></script>
+		<script src="js/filtra.js"></script>
+		<script src="js/buscarprodutos.js"></script>
+	</body>
+</html>
